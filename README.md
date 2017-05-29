@@ -40,14 +40,14 @@ Searching can be done without login(Commenting can not be done without login)
 
 To build project in angular:
 commands:
-1.ng new <name of project>(to build project)
-2.ng g component <component name> (to make component)
-3.ng g service <service name> (to make service)
+1.ng new [name of project](to build project)
+2.ng g component [component name>](to make component)
+3.ng g service [service name](to make service)
 
 
 
 To start node:
-node <index file name>
+node [index file name]
 
 
 To start mongo:
