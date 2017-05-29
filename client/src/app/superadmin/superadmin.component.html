@@ -1,0 +1,72 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Kellton Tech</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://localhost:4200">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contacts</a></li>
+
+    </ul>
+    </div>
+</nav>
+
+
+<div class="row">
+  <div class="col-md-4">
+
+  <table class="table table-striped">
+        <thead>
+          <th>Username</th>
+          <th>Password</th>
+          <th>User_type</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let items of users">
+            <td>{{items.username}}</td>
+            <td>{{items.password}}</td>
+            <td>{{items.user_type}}</td>
+          <td><button (click)="show(items.username)" class="btn btn-info"> Edit </button></td>
+          <td><button class="btn btn-info" (click)="deleteUsers(items.username)"> Delete </button></td>
+          <!-- <td>   {{items.updated_at}}</td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+    <div *ngIf="flag">
+      <form #form="ngForm" (ngSubmit)="edituser(form.value)">
+        <div class="form-group" style="width:200px">
+
+          <input class="form-control" type="text" name="password" #Series placeholder="Enter new password" [(ngModel)]="newname">
+</div>
+<div class="form-group" style="width:200px">
+        <input class="form-control" required type="description" name="user_type" [(ngModel)]="desc" #user_type="ngModel">
+        </div>
+        <button type="submit" style="margin: 0px 0px 0px 120px;" class="btn btn-info">Proceed</button>
+      </form>
+
+</div>
+<button class="btn btn-info" (click)="add()"  > Add </button>
+
+<div *ngIf="flag1" style="width:200px">
+  <form #form="ngForm" (ngSubmit)="adduser(form.value)">
+    <div class="form-group">
+
+      <input type="text" name="username" #Series placeholder="Enter new username" [(ngModel)]="newname" class="form-control">
+    </div>
+    <div class="form-group">
+      <input required type="text" name="password" placeholder="Enter new password"[(ngModel)]="desc" #user_type="ngModel"  class="form-control">
+    </div>
+    <div class="form-group">
+      <input required type="description" name="user_type" placeholder="Enter new usertype" [(ngModel)]="desc1" #user_type="ngModel"  class="form-control">
+    </div>
+    <button type="submit" class="btn btn-info">Proceed</button>
+  </form>
+
+
+
+
+
+<!-- <button (click)="openaaddform()" class="btn btn-success"> Add Series </button> -->

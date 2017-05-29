@@ -1,0 +1,100 @@
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Kellton Tech</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://localhost:4200">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contacts</a></li>
+      <li><a routerLink='/series-page' routerLinkActive="active"  (click)="getSeries()">Series</a></li>
+      <li><a routerLink='/season-page' routerLinkActive="active" (click)="getSeason()">Season</a></li>
+      <li><a routerLink='/comics-page' routerLinkActive="active" (click)="getComics()" >Comics</a></li>
+    </ul>
+    </div>
+</nav>
+<!-- <router-outlet> </router-outlet> -->
+
+<!--
+<div class="row">
+  <div class="col-md-4">
+
+  <table class="table table-striped">
+        <thead>
+          <th>Name</th>
+          <th>Series_id:</th>
+          <th>Story</th>
+          <th>starts_on</th>
+          <th>created_at</th>
+          <th>updated_at</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let items of comics">
+            <td>{{items.Name}}</td>
+            <td>{{items.Season_id}}</td>
+            <td>{{items.story}}</td>
+          <td>{{items.starts_on}}</td>
+          <td>{{items.created_at}}</td>
+            <td>{{items.updated_at}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+
+<div class="row">
+  <div class="col-md-4">
+
+  <table class="table table-striped">
+        <thead>
+          <th>Name</th>
+          <th>description:</th>
+          <th>Series_id</th>
+          <th>created_at</th>
+          <th>Season_id</th>
+          <th>starts_on</th>
+          <th>ends_on</th>
+          <th>updated_at</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let items of season">
+            <td>{{items.Name}}</td>
+            <td>{{items.description}}</td>
+            <td>{{items.Series_id}}</td>
+           <td>{{items.created_at}}</td>
+          <td>{{items.Season_id}}</td>
+          <td>{{items.starts_on}</td>
+            <td>{{items.ends_on}}</td>
+            <td>{{items.updated_at}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-4">
+
+      <table class="table table-striped">
+            <thead>
+              <th>Name</th>
+              <th>Series_id:</th>
+              <th>description</th>
+              <th>created_by</th>
+              <th>updated_at</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let items of series">
+                <td>{{items.name}}</td>
+                <td>{{items.Series_id}}</td>
+                <td>{{items.description}}</td>
+              <td>  {{items.created_by}}</td>
+              <td>   {{items.updated_at}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div> -->

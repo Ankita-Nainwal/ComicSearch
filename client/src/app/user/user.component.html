@@ -1,0 +1,44 @@
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Kellton Tech</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://localhost:4200">Home</a></li>
+      <li><a (click)="getComics()">Comics</a></li>
+      <li><a href="#">Contacts</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <app-search> </app-search>
+    <!-- <form class="navbar-form navbar-left">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-danger">Search</button>
+    </form> -->
+</div>
+</nav>
+<div class="row">
+<div class="col-md-6">
+  <div *ngFor="let items of comics">
+  <label>Name:</label>{{items.Name}}<br/>
+
+  <label>Season_id: </label>{{items.Season_id}}<br/>
+  <label>Story </label>{{items.Story}}<br/>
+  <label>starts_on</label>{{items.starts_on}}<br/>
+  <label>ends_on</label>{{items.ends_on}}<br/>
+  <label>created_at</label>{{items.created_at}}<br/>
+  <label>updated_at</label>{{items.updated_at}}<br/>
+</div>
+</div>
+    <div class="container">
+      <div class="col-md-6">
+    <form >
+        <textarea class="form-control" style="float:left; margin:100px 0px 0px 0px" id="text" name="text" placeholder="Type in your message" rows="7"></textarea>
+        <h6 class="pull-right" id="count_message"></h6>
+        <button class="btn btn-danger" style="float:right" type="submit">Comment</button>
+    </form>
+    </div>
+    </div>
+    </div>

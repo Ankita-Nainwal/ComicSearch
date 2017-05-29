@@ -1,0 +1,44 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Kellton Tech</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://localhost:4200">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contacts</a></li>
+      <li><a routerLink='/season-page' routerLinkActive="active" (click)="getSeason()">Season</a></li>
+      <li><a routerLink='/comics-page' routerLinkActive="active" (click)="getComics()">Comics</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+
+
+</div>
+    <div class="row">
+      <div class="col-md-4">
+
+      <table class="table table-striped">
+            <thead>
+              <th>Name</th>
+              <th>Series_id:</th>
+              <th>description</th>
+              <th>created_by</th>
+              <!-- <th>updated_at</th> -->
+            </thead>
+            <tbody>
+              <tr *ngFor="let items of series">
+                <td>{{items.name}}</td>
+                <td>{{items.Series_id}}</td>
+                <td>{{items.description}}</td>
+              <td>{{items.created_by}}</td>
+              <td><button class="btn btn-info"> Edit </button></td>
+              <td><button class="btn btn-info" (click)="deleteSeries(items._id)"> Delete </button></td>
+              <!-- <td>   {{items.updated_at}}</td> -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+<button class="btn btn-info"> Add </button>
